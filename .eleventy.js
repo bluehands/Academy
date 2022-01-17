@@ -12,11 +12,14 @@ module.exports = function(eleventyConfig) {
             : md.render(content);
     });
 
+    // Add watch targets
+    eleventyConfig.addWatchTarget('./tailwind.config.js');
+    eleventyConfig.addWatchTarget('./src/styles/*.css');
+
     // Return your Object options:
     return {
         dir: {
             input: "./src",
-            output: "./build"
         }
-    }
+    };
 };
