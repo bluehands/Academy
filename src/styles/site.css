@@ -1,3 +1,27 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.article {
+    @apply container mx-auto;
+}
+
+.article-header {
+    @apply text-9xl;
+}
+
+.article-header-rule {
+    @apply mb-5;
+}
+
+h1 {
+    @apply text-4xl;
+}
+
+h2 {
+    @apply text-3xl;
+}
+
+a {
+    @apply text-blue-800 hover:text-blue-600 visited:text-purple-700;
+}

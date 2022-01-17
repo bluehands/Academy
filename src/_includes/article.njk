@@ -7,6 +7,10 @@
     <link rel="stylesheet" href="/styles/site.css" />
   </head>
   <body>
-    {{ content | safe }}
+    <div class="article">
+      <h1 class="article-header">{{ title }}<h1>
+      <hr class="article-header-rule" />
+      {{ content | safe }}
+    <div>
   </body>
 </html>
