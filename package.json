@@ -5,8 +5,11 @@
   "main": "index.js",
   "scripts": {
     "serve:tailwind": "npx tailwindcss -i ./src/styles/site.css -o ./_site/styles/site.css --watch",
-    "serve:eleventy": "eleventy --serve",
+    "serve:eleventy": "ELVENTY_ENV=development eleventy --serve",
     "serve": "run-p serve:*",
+    "build:tailwind": "npx tailwindcss -i ./src/styles/site.css -o ./_site/styles/site.css",
+    "build:eleventy": "ELVENTY_ENV=production eleventy",
+    "build": "NODE_ENV=production run-s build:*",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
