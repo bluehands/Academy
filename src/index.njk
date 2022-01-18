@@ -3,5 +3,5 @@ layout: main
 title: Index
 ---
 {%- for article in collections.article %}
-<a href="{{ post.url }}" class="text-2xl">{{ article.data.title }}</a><br />
+<a href="{{ article.url }}" class="text-2xl">{{ article.data.title }}</a><br />
 {%- endfor %}

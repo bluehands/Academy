@@ -1,8 +1,9 @@
 const yaml = require("js-yaml");
 const md = require("markdown-it")();
+const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 
 module.exports = function(eleventyConfig) {
-    // Yaml
+    // Extensions
     eleventyConfig.addDataExtension("yaml", (contents) => yaml.load(contents));
 
     // Shortcodes
@@ -15,6 +16,9 @@ module.exports = function(eleventyConfig) {
     // Add watch targets
     eleventyConfig.addWatchTarget('./tailwind.config.js');
     eleventyConfig.addWatchTarget('./src/styles/*.css');
+
+    // Plugins
+    eleventyConfig.addPlugin(syntaxHighlight);
 
     // Return your Object options:
     return {
