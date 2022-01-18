@@ -15,5 +15,5 @@ Console.WriteLine("höhöhö emoji go 🚗🚗🚗🚗🚗");
 
 ## Powershell
 ```powershell
-Write-Host "Why of course this would be possible!"
+Write-Host "Why naturally this would be possible!"
 ```
