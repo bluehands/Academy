@@ -2,6 +2,7 @@ const yaml = require("js-yaml");
 const md = require("markdown-it")();
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const inclusiveLangPlugin = require("@11ty/eleventy-plugin-inclusive-language");
+const pluginCSS = require("eleventy-postcss-extension");
 
 module.exports = function(eleventyConfig) {
     // Extensions
@@ -21,6 +22,7 @@ module.exports = function(eleventyConfig) {
     // Plugins
     eleventyConfig.addPlugin(syntaxHighlight);
     eleventyConfig.addPlugin(inclusiveLangPlugin);
+    eleventyConfig.addPlugin(pluginCSS);
 
     // Return your Object options:
     return {

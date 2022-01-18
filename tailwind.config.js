@@ -1,5 +1,5 @@
 module.exports = {
-    content: ['_site/**/*.html'],
+    content: ['./src/**/*.{html,njk}'],
     safelist: [],
     darkMode: "media",
     theme: {
