@@ -3,15 +3,7 @@
 @tailwind utilities;
 
 body {
-    @apply container mx-auto pt-10 pb-10 dark:bg-slate-900 dark:text-white;
-}
-
-.article-header {
-    @apply text-7xl;
-}
-
-.article-header-rule {
-    @apply mb-10 mt-5;
+    @apply py-10 dark:bg-slate-900 dark:text-white;
 }
 
 .header-style {
@@ -35,7 +27,7 @@ ul {
 }
 
 a {
-    @apply text-blue-800 hover:text-blue-600 visited:text-purple-700 dark:text-blue-200 dark:hover:text-blue-400 dark:visited:text-purple-200;
+    @apply text-blue-900 hover:text-blue-700 dark:text-blue-200 dark:hover:text-blue-400;
 }
 
 .muted {

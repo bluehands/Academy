@@ -2,6 +2,10 @@
 layout: main
 title: Index
 ---
+<div class="text-5xl">bluehands Academy</div>
+<hr class="mb-5 mt-3" />
 {%- for article in collections.article | reverse %}
-<a href="{{ article.url }}" class="text-2xl">{{ article.data.title }} <small class="muted">(by {{ authors[article.data.author] | fullName }})</small></a><br />
+<div>
+    <a href="{{ article.url }}" class="text-2xl">{{ article.data.title }} <small class="muted">(by {{ authors[article.data.author] | fullName }})</small></a>
+</div>
 {%- endfor %}

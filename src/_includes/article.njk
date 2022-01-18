@@ -1,6 +1,11 @@
 ---
 layout: main
 ---
-<span class="article-header">{{ title }}</span><small class="muted"> by {{ authors[author] | fullName }} @ {{ page.date | readableDate }}</small>
-<hr class="article-header-rule" />
-{{ content | safe }}
+<div>
+    <div><a href="/">⬅ back to index</a></div>
+    <div class="text-7xl">{{ title }}<small class="muted text-base"> by {{ authors[author] | fullName }} @ {{ page.date | readableDate }}</small></div>
+    <hr class="mb-10 mt-5" />
+</div>
+<div>
+    {{ content | safe }}
+</div>
