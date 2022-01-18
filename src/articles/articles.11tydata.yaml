@@ -1,1 +1,2 @@
-layout: article.njk
+layout: article
+tags: article
