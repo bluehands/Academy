@@ -24,6 +24,9 @@ module.exports = function(eleventyConfig) {
     eleventyConfig.addPlugin(inclusiveLangPlugin);
     eleventyConfig.addPlugin(pluginCSS);
 
+    // Filters
+    eleventyConfig.addFilter('fullName', value => `${value.name} ${value.surname}`)
+
     // Return your Object options:
     return {
         dir: {

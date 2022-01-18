@@ -25,3 +25,7 @@ h2 {
 a {
     @apply text-blue-800 hover:text-blue-600 visited:text-purple-700 dark:text-blue-200 dark:hover:text-blue-400 dark:visited:text-purple-200;
 }
+
+.muted {
+    @apply italic text-gray-600;
+}

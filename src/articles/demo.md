@@ -1,5 +1,6 @@
 ---
 title: Demo Title
+author: waldemar
 ---
 # Demo Title Subheader
 This is demo content which show how an article might look like. More at 7.
