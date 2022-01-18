@@ -1,6 +1,6 @@
 ---
 layout: main
 ---
-<span class="article-header">{{ title }}</span><small class="muted">by {{ authors[author] | fullName }} @ {{ page.date }}</small>
+<span class="article-header">{{ title }}</span><small class="muted"> by {{ authors[author] | fullName }} @ {{ page.date | readableDate }}</small>
 <hr class="article-header-rule" />
 {{ content | safe }}

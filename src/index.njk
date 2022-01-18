@@ -2,6 +2,6 @@
 layout: main
 title: Index
 ---
-{%- for article in collections.article %}
+{%- for article in collections.article | reverse %}
 <a href="{{ article.url }}" class="text-2xl">{{ article.data.title }} <small class="muted">(by {{ authors[article.data.author] | fullName }})</small></a><br />
 {%- endfor %}

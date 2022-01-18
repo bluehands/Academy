@@ -3,23 +3,35 @@
 @tailwind utilities;
 
 body {
-    @apply container mx-auto dark:bg-slate-900 dark:text-white;
+    @apply container mx-auto pt-10 pb-10 dark:bg-slate-900 dark:text-white;
 }
 
 .article-header {
-    @apply text-9xl;
+    @apply text-7xl;
 }
 
 .article-header-rule {
-    @apply mb-5;
+    @apply mb-10 mt-5;
+}
+
+.header-style {
+    @apply mt-4 mb-1;
 }
 
 h1 {
-    @apply text-4xl;
+    @apply header-style text-4xl;
 }
 
 h2 {
-    @apply text-3xl;
+    @apply header-style text-3xl;
+}
+
+h3 {
+    @apply header-style text-2xl;
+}
+
+ul {
+    @apply list-disc ml-10;
 }
 
 a {
