@@ -4,6 +4,7 @@ const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const inclusiveLangPlugin = require("@11ty/eleventy-plugin-inclusive-language");
 // const pluginCSS = require("eleventy-postcss-extension");
 const { DateTime } = require("luxon");
+const searchFilter = require("./src/filters/searchFilter");
 
 module.exports = function(eleventyConfig) {
     // Extensions
@@ -32,6 +33,7 @@ module.exports = function(eleventyConfig) {
           zone: 'Europe/Berlin'
         }).toFormat("dd/MM/yyyy HH:mm");
     });
+    eleventyConfig.addFilter('search', searchFilter);
 
     // Passthrough copies
     eleventyConfig.addPassthroughCopy("./src/**/*.png");
