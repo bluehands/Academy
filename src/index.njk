@@ -5,12 +5,10 @@ title: Index
 <div class="text-5xl">bluehands Academy</div>
 <hr class="mb-5 mt-3" />
 <input class="bg-inherit outline-none text-2xl w-full" type="search" placeholder="Search..." data-bind="hasFocus: searchBarActive, textInput: searchBarInput" />
-<div class="absolute bg-black" data-bind="visible: searchBarActive">
-    <div>Search Result #1</div>
-    <div>Search Result #2</div>
-    <div>Search Result #3</div>
-    <div>Search Result #4</div>
-    <div>Search Result #5</div>
+<div class="absolute bg-black" data-bind="visible: searchBarActive, foreach: searchResults">
+    <div>
+        <a data-bind="attr: { href: id }, text: title"></a>
+    </div>
 </div>
 {%- for article in collections.article | reverse %}
 <div>
