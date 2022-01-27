@@ -5,15 +5,16 @@ title: Index
 <div class="text-5xl">bluehands Academy</div>
 <hr class="mb-5 mt-3" />
 <input class="bg-inherit outline-none text-2xl w-full" type="search" placeholder="Search..." data-bind="hasFocus: searchBarActive, textInput: searchBarInput" />
-<div class="absolute bg-black" data-bind="visible: searchBarActive, foreach: searchResults">
+<div class="absolute bg-blue-900 p-2 rounded-bl-lg rounded-br-lg drop-shadow-2xl" data-bind="visible: searchBarActive, foreach: searchResults">
     <div>
         <a data-bind="attr: { href: id }, text: title"></a>
     </div>
 </div>
-{%- for article in collections.article | reverse %}
 <div>
-    <a href="{{ article.url }}" class="text-2xl">{{ article.data.title }} <small class="muted">(by {{ authors[article.data.author] | fullName }})</small></a>
+    {%- for article in collections.article | reverse %}
+    <div>
+        <a href="{{ article.url }}" class="text-2xl">{{ article.data.title }} <small class="muted">(by {{ authors[article.data.author] | fullName }})</small></a>
+    </div>
+    {%- endfor %}
 </div>
-{%- endfor %}
-
 <script src="/assets/main.js"></script>

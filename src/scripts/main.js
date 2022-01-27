@@ -4,7 +4,8 @@ const elasticlunr = require("elasticlunr");
 function createViewModel() {
     var vm = {
         searchIndex: new elasticlunr.Index(),
-        searchBarActive: ko.observable(false),
+        searchBarActive: ko.observable(false)
+            .extend({ rateLimit: { timeout: 500, method: "notifyWhenChangesStop" } }),
         searchBarInput: ko.observable("")
             .extend({ rateLimit: 250 }),
         searchResults: ko.observable([]),
