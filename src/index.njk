@@ -5,9 +5,14 @@ title: Index
 <div class="text-5xl">bluehands Academy</div>
 <hr class="mb-5 mt-3" />
 <input class="bg-inherit outline-none text-2xl w-full" type="search" placeholder="Search..." data-bind="hasFocus: searchBarActive, textInput: searchBarInput" />
-<div class="absolute bg-blue-900 p-2 rounded-bl-lg rounded-br-lg drop-shadow-2xl" data-bind="visible: searchBarActive, foreach: searchResults">
-    <div>
-        <a data-bind="attr: { href: id }, text: title"></a>
+<div class="absolute bg-slate-700 p-2 rounded-bl-lg rounded-br-lg drop-shadow-2xl" data-bind="visible: searchBarActive">
+    <div data-bind="visible: searchResults().length > 0, foreach: searchResults">
+        <div>
+            <a data-bind="attr: { href: id }, text: title"></a>
+        </div>
+    </div>
+    <div data-bind="visible: searchResults().length == 0">
+        <span class="text-white italic">No results found.</span>
     </div>
 </div>
 <div>
